@@ -10,7 +10,8 @@
       text-white
     "
   >
-    DcHeros
+    <router-link class="mx-2" to="/dc-heros">Dc Heros</router-link>
+    <router-link class="mx-2" to="/calender">Calender</router-link>
   </nav>
 </template>
 
