@@ -10,13 +10,24 @@
       text-white
     "
   >
-    <router-link class="mx-2" to="/dc-heros">Dc Heros</router-link>
-    <router-link class="mx-2" to="/calender">Calender</router-link>
+    <router-link class="mx-2" v-for="item in list" :to="item.to" :key="item.to">
+      {{ item.title }}
+    </router-link>
   </nav>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      list: [
+        { title: "Dc Heros", to: "/dc-heros" },
+        { title: "Calender", to: "/calender" },
+        { title: "Markdown", to: "/markdown" },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
